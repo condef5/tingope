@@ -1,4 +1,64 @@
-<div>
-  <h1>Explora los Sabores Diarios de Tingo María</h1>
-  <p>Descubre la oferta culinaria en diversos lugares, con platos deliciosos, postres irresistibles y mucho más.</p>
+<div class="max-w-[1000px] m-auto">
+  <header class="text-center">
+
+    <h1 class="text-3xl font-bold">Explora los Sabores Diarios de Tingo María</h1>
+    <p class="mt-2 text-balance">Descubre la oferta culinaria en diversos lugares, con platos deliciosos, postres irresistibles y mucho más.</p>
+  </header>
+
+  <div class="flex mt-8 gap-4">
+    <% @food_places.each do |food_place| %>
+      <div class="restaurant-info w-1/2 bg-[#ff634761] p-5 flex flex-col">
+        <h3 class="text-slate-700 text-xl">
+          <%= food_place.name  %>
+        </h3>
+        <p class="text-sm text-balance">
+          <%= food_place.description %>
+        </p>
+
+        <div class="flex gap-1 items-center mt-2">
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="16"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="text-sm">
+            <%= food_place.address %>
+          </span>
+        </div>
+
+        <% if food_place.opening_hours.present?  %>
+          <div class="flex gap-1 items-center mt-2">
+            <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="16"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span class="text-sm">
+              <%= food_place.opening_hours %>
+            </span>
+          </div>
+        <% end %>
+
+        <div class="text-sm pt-2 mt-auto">
+          <a href="https://wa.me/51984285080" target="_blank">👉 Pedir por WhatsApp</a>
+        </div>
+      </div>
+    <% end  %>
+  </div>
 </div>
