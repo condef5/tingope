@@ -1,4 +1,5 @@
-@tailwind base;
+/* TODO: disable until we use daysi-ui as plugin with tailwind */
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
