@@ -1,5 +1,6 @@
 class FoodPlacesController < ApplicationController
   before_action :set_food_place, only: %i[ show edit update destroy ]
+  skip_before_action :authenticate, only: %i[ new create ]
 
   # GET /food_places or /food_places.json
   def index
@@ -25,7 +26,7 @@ class FoodPlacesController < ApplicationController
 
     respond_to do |format|
       if @food_place.save
-        format.html { redirect_to food_place_url(@food_place), notice: "Food place was successfully created." }
+        format.html { redirect_to root_path, notice: "Food place was successfully created." }
         format.json { render :show, status: :created, location: @food_place }
       else
         format.html { render :new, status: :unprocessable_entity }
