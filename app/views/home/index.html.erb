@@ -1,16 +1,16 @@
 <div class="max-w-[1000px] m-auto">
   <header class="text-center">
-
-    <h1 class="text-3xl font-bold">Explora los Sabores Diarios de Tingo María</h1>
+    <h1 class="text-3xl font-bold text-balance">Explora los Sabores Diarios de Tingo María</h1>
     <p class="mt-2 text-balance">Descubre la oferta culinaria en diversos lugares, con platos deliciosos, postres irresistibles y mucho más.</p>
   </header>
 
-  <div class="flex mt-8 gap-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 mt-8 gap-6">
     <% @food_places.each do |food_place| %>
-      <div class="restaurant-info w-1/2 bg-red-300 p-5 flex flex-col">
-        <h3 class="text-slate-700 text-xl">
+      <div class="card border border-slate-100 w-full bg-base-100 shadow-xl p-5 flex flex-col">
+        <h3 class="text-slate-700 text-xl mb-2 dark:text-white">
           <%= food_place.name  %>
         </h3>
+
         <p class="text-sm text-balance">
           <%= food_place.description %>
         </p>
@@ -63,7 +63,7 @@
   </div>
 </div>
 
-<div class="z-10 fixed w-full bottom-4 left-0  text-white  flex justify-center">
+<div class="z-10 fixed w-full bottom-4 left-0 text-white flex justify-end sm:justify-center p-2">
   <div class="bg-red-300 rounded-full p-4">
     <%= link_to new_food_place_path do %>
       <svg
