@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tourist places</h1>
+
+<div id="tourist_places">
+  <% @tourist_places.each do |tourist_place| %>
+    <%= render tourist_place %>
+    <p>
+      <%= link_to "Show this tourist place", tourist_place %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tourist place", new_tourist_place_path %>

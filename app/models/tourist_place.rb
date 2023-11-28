@@ -1,0 +1,2 @@
+class TouristPlace < ApplicationRecord
+end
