@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <%= render @tourist_place %>
 
-<%= render @tourist_place %>
+    <%= link_to "Edit this tourist place", edit_tourist_place_path(@tourist_place), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 
-<div>
-  <%= link_to "Edit this tourist place", edit_tourist_place_path(@tourist_place) %> |
-  <%= link_to "Back to tourist places", tourist_places_path %>
+    <div>
+      <%= button_to "Destroy this tourist place", tourist_places_path(@tourist_place), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
 
-  <%= button_to "Destroy this tourist place", @tourist_place, method: :delete %>
+      <%= link_to "Back to tourist places", tourist_places_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    </div>
+  </div>
 </div>

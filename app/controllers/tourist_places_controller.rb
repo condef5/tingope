@@ -1,5 +1,6 @@
 class TouristPlacesController < ApplicationController
   before_action :set_tourist_place, only: %i[ show edit update destroy ]
+  skip_before_action :authenticate, only: %i[ new create ]
 
   # GET /tourist_places or /tourist_places.json
   def index
