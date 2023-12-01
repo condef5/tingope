@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :food_places
+  resources :tourist_places
 
   # ---------- authentication routes ----------
   get  "sign_in", to: "sessions#new"

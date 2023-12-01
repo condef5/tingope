@@ -1,14 +1,14 @@
 <div class="mx-auto md:w-2/3 w-full flex">
   <div class="mx-auto">
-    <%= render @food_place %>
+    <%= render @tourist_place %>
 
-    <%= link_to "Edit this food_place", edit_food_place_path(@food_place), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this tourist place", edit_tourist_place_path(@tourist_place), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 
     <div>
-      <%= button_to "Destroy this food_place", food_place_path(@food_place), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-red-500 hover:bg-red-600 text-white font-medium" %>
+      <%= button_to "Destroy this tourist place", tourist_places_path(@tourist_place), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-red-500 hover:bg-red-600 text-white font-medium" %>
 
       <div class="mt-2 rounded-lg py-3 px-5 bg-gray-100 border-s-gray-400 inline-block font-medium">
-        <%= link_to food_places_path do %>
+        <%= link_to tourist_places_path do %>
           <p class="flex gap-2">
             <svg
               viewBox="0 0 24 24"
@@ -24,7 +24,7 @@
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
-            Return to food places list
+            Return to tourist places list
           </p>
         <% end %>
       </div>

@@ -40,4 +40,28 @@ FoodPlace.insert_all([
   }
 ])
 
+TouristPlace.insert_all([
+  {
+    name: "Catarata de Santa Carmen",
+    description: "La catarata de Santa Carmen es una cascada de agua que se encuentra en el distrito de Mariano Dámaso Beraún, en la provincia de Leoncio Prado, en el departamento de Huánuco, en el Perú. Se encuentra a 1.5 km de la ciudad de Tingo María.",
+    address: "Tingo María",
+    phone_number: "936828743",
+    opening_hours: "6:30pm a 11:00pm",
+    website_url: "https://www.facebook.com/Catarata-de-Santa-Carmen-104857771184306/",
+    photo: "",
+    label: "Swimming",
+  },
+  {
+    name: "Cueva de las Lechuzas",
+    description: "La Cueva de las Lechuzas es una cueva ubicada en el distrito de Mariano Dámaso Beraún, en la provincia de Leoncio Prado, en el departamento de Huánuco, en el Perú. Se encuentra a 5 km de la ciudad de Tingo María.",
+    address: "Tingo María",
+    phone_number: "936828743",
+    opening_hours: "6:30pm a 11:00pm",
+    website_url: "https://www.facebook.com/Cueva-de-las-Lechuzas-104857771184306/",
+    photo: "",
+    label: "Trekking",
+  }
+])
+
 puts "seeded #{FoodPlace.count} food places 🍔"
+puts "seeded #{TouristPlace.count} tourist places 🏞"
